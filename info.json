@@ -2,7 +2,7 @@
 "name": "spidertron2",
 "version": "0.1.0",
 "factorio_version": "1.1",
-"title": "Spidertron 2",
+"title": "Spidertron faster",
 "author": "Shakiata",
 "discription": "An improved spidertron with higher cost.",
 "dependencies": ["base >= 1.1"]

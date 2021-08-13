@@ -1,6 +1,8 @@
 --item.lua
 local spidertron2 = table.deepcopy(data.raw["spider-vehicle"]["spidertron"])
 
+local spidertron2 = table.deepcopy(data.raw["item-with-entity-data"]["spidertron"])
+
 spidertron2.name = "spidertron2"
 spidertron2.icons = {
     {
@@ -8,7 +10,14 @@ spidertron2.icons = {
         tint = {r=1,g=0.5,b=1,a=0.3}
     },
 }
-spidertron2.equipment_grid = "large-equipment-grid"
+
+spidertron2.equipment_grid = {
+    type = "equipment-grid",
+    name = "large-equipment-grid",
+    width = 15,
+    height = 15,
+    equipment_categories = {"armor"}
+}
 
 
 local recipe = table.deepcopy(data.raw["recipe"]["spidertron"])
@@ -28,4 +37,4 @@ recipe.name = "spidertron2"
 
 recipe.result = "spidertron2"
 
-data:extend{spidertron2,recipe}
+data:extend{spidertron2,recipe,item}
