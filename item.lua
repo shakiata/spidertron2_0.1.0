@@ -1,29 +1,27 @@
 --item.lua
 local spidertron2 = table.deepcopy(data.raw["spider-vehicle"]["spidertron"])
 
-local spidertron2 = table.deepcopy(data.raw["item-with-entity-data"]["spidertron"])
 
-spidertron2.name = "spidertron2"
+spidertron2.name = "spidertron-placed"
 spidertron2.icons = {
     {
         icon = spidertron2.icon,
         tint = {r=1,g=0.5,b=1,a=0.3}
     },
 }
+local spidertron2e = table.deepcopy(data.raw["item-with-entity-data"]["spidertron"])
 
-spidertron2.equipment_grid = {
-    type = "equipment-grid",
-    name = "large-equipment-grid",
-    width = 15,
-    height = 15,
-    equipment_categories = {"armor"}
-}
+spidertron2e.name = "spidertron-placed"
+
+spidertron2e.equipment_grid = "large-equipment-grid"
+
+spidertron2.place_result = "spidertron-placed"
 
 
 local recipe = table.deepcopy(data.raw["recipe"]["spidertron"])
 
 recipe.enabled = true
-recipe.name = "spidertron2"
+recipe.name = "spidertron-2"
     recipe.ingredients = {
     {"exoskeleton-equipment", 8},
     {"fusion-reactor-equipment", 4},
@@ -35,6 +33,6 @@ recipe.name = "spidertron2"
     {"raw-fish", 25}
 }
 
-recipe.result = "spidertron2"
+recipe.result = "spidertron-placed"
 
-data:extend{spidertron2,recipe,item}
+data:extend{spidertron2,recipe,spidertron2e,item}
