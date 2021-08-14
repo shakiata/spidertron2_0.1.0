@@ -1,18 +1,17 @@
 --item.lua
-local spidertron2 = table.deepcopy(data.raw["spider-vehicle"]["spidertron"])
--- this should copy the part that is in your invitory
+local spidertron2 = table.deepcopy(data.raw["spider-vehicle"]["spidertron"]) --vehicle
 
-spidertron2.name = "spidertron-placed"
-spidertron2.icons = {
+local spidertron2e = table.deepcopy(data.raw["item-with-entity-data"]["spidertron"]) --invintory
+
+spidertron2e.name = "spidertron-placed" 
+spidertron2e.icons = {
     {
-        icon = spidertron2.icon,
-        tint = {r=1,g=0.5,b=1,a=0.3}
+        icon = spidertron2e.icon,
+        tint = {r=0,g=1,b=1,a=0.3}
     },
 }
-local spidertron2e = table.deepcopy(data.raw["item-with-entity-data"]["spidertron"])
--- this should copy the part that gets placed when you take from invintory and place
---on ground,   it should also edit the equipment grid
-spidertron2e.name = "spidertron-placed"
+
+spidertron2.name = "spidertron-placed"
 
 spidertron2.equipment_grid = "large-equipment-grid"
 
