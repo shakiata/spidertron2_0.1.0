@@ -29,6 +29,9 @@ spidertron2.minable.results = {
         amount_max = 1
     }
 }
+spidertron2.max_health = 6000
+
+spidertron2.inventory_size = 100
 
 spidertron2.name = "spidertron-placed"
 
