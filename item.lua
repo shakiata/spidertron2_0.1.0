@@ -2,6 +2,17 @@
 local spidertron2 = table.deepcopy(data.raw["spider-vehicle"]["spidertron"]) --vehicle
 
 local spidertron2e = table.deepcopy(data.raw["item-with-entity-data"]["spidertron"]) --invintory
+data:extend(
+    {
+        {
+            type = "equipment-grid",
+            name = "extra-large",
+            width = 15,
+            height = 15,
+            equipment_categories = {"armor"}
+        }
+    }
+)
 
 spidertron2e.name = "spidertron-placed" 
 spidertron2e.icons = {
@@ -10,10 +21,18 @@ spidertron2e.icons = {
         tint = {r=0,g=1,b=1,a=0.3}
     },
 }
+spidertron2.minable.results = {
+    {
+        type = "item",
+        name = "spidertron-placed",
+        amount_min = 1,
+        amount_max = 1
+    }
+}
 
 spidertron2.name = "spidertron-placed"
 
-spidertron2.equipment_grid = "large-equipment-grid"
+spidertron2.equipment_grid = "extra-large"
 
 spidertron2e.place_result = "spidertron-placed"
 
