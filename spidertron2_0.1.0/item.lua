@@ -13,7 +13,7 @@ data:extend(
         }
     }
 )
-
+-- spidertron2e.leg_movement_speed = 3  -- will possibly increase speed unsure needs more testing
 spidertron2e.name = "spidertron-placed" 
 spidertron2e.icons = {
     {
@@ -42,7 +42,7 @@ spidertron2e.place_result = "spidertron-placed"
 
 local recipe = table.deepcopy(data.raw["recipe"]["spidertron"])
 -- copies recipe and changes it for the new one.... This actually works 
-recipe.enabled = true
+recipe.enabled = false
 recipe.name = "spidertron-placed"
     recipe.ingredients = {
     {"exoskeleton-equipment", 16},
